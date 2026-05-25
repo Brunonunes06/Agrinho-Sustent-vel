@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="agrinho" content="Calculadora de Consumo de Água">
+  <meta name="description" content="Projeto Agrinho: calculadora de consumo de água para incentivar a economia no campo e em casa.">
+   <link rel="icon" href="clc.png" type="image/png">
+  <title>Calculadora de Consumo de Água | Agro Sustentável</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="#" class="brand">Agro Sustentável</a>
+      <p class="tagline">Calculadora de Consumo de Água para práticas mais conscientes</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro" aria-labelledby="intro-title">
+      <h1 id="intro-title">Economize água com hábitos sustentáveis</h1>
+      <p>Preencha os dados abaixo para descobrir quanto de água sua família consome e quanto pode economizar com mudanças simples.</p>
+    </section>
+
+    <section class="calculator" aria-labelledby="calculator-title">
+      <h2 id="calculator-title">Calculadora de Consumo de Água</h2>
+      <form id="water-form">
+        <fieldset>
+          <legend>Dados para cálculo de consumo</legend>
+
+          <div class="field-group">
+            <label for="people">Número de pessoas na casa</label>
+            <input type="number" id="people" name="people" min="1" value="4" required>
+          </div>
+
+          <div class="field-group">
+            <label for="showers">Banhos por pessoa por dia</label>
+            <input type="number" id="showers" name="showers" min="0" step="0.1" value="1">
+          </div>
+
+          <div class="field-group">
+            <label for="showerMinutes">Tempo médio do banho (minutos)</label>
+            <input type="number" id="showerMinutes" name="showerMinutes" min="1" value="8">
+          </div>
+
+          <div class="field-group">
+            <label for="flushes">Número de descargas de vaso sanitário por dia</label>
+            <input type="number" id="flushes" name="flushes" min="0" value="12">
+          </div>
+
+          <div class="field-group">
+            <label for="washing">Máquinas de lavar por semana</label>
+            <input type="number" id="washing" name="washing" min="0" value="2">
+          </div>
+
+          <div class="field-group">
+            <label for="garden">Uso de água no jardim por semana (litros)</label>
+            <input type="number" id="garden" name="garden" min="0" value="200">
+          </div>
+        </fieldset>
+
+        <div class="actions">
+          <button type="submit" class="btn">Calcular consumo</button>
+          <button type="reset" class="btn secondary">Limpar</button>
+        </div>
+      </form>
+
+      <div class="result" id="result" aria-live="polite"></div>
+    </section>
+
+    <section class="tips" aria-labelledby="tips-title">
+      <h2 id="tips-title">Dicas de economia de água</h2>
+      <div class="tip-grid">
+        <article class="tip-card">
+          <h3>Banhos mais curtos</h3>
+          <p>Diminuir 1 ou 2 minutos no banho pode reduzir centenas de litros por semana.</p>
+        </article>
+        <article class="tip-card">
+          <h3>Reutilize água</h3>
+          <p>Água usada na lavagem de verduras pode regar plantas e hortas.</p>
+        </article>
+        <article class="tip-card">
+          <h3>Conserte vazamentos</h3>
+          <p>Pingos constantes desperdiçam muita água ao longo do tempo.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Projeto Agrinho | Sustentabilidade no campo e na cidade | Criador por: Bruno Perandré nunes Dos Santos</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

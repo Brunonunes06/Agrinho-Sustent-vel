@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --green-dark: #0d5c2f;
+  --green: #2f9e44;
+  --green-light: #8ce99a;
+  --bg: #f4fff6;
+  --white: #ffffff;
+  --text: #183022;
+  --shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins', sans-serif;
+  background:
+  radial-gradient(circle at top left, rgba(47,158,68,.2), transparent 25%),
+  radial-gradient(circle at bottom right, rgba(140,233,154,.25), transparent 30%),
+  var(--bg);
+
+  color:var(--text);
+  min-height:100vh;
+  line-height:1.6;
+}
+
+.container{
+  width:min(1150px, calc(100% - 2rem));
+  margin:auto;
+}
+
+/* HEADER */
+
+.site-header{
+  padding:4rem 0 6rem;
+  background:
+  linear-gradient(135deg,#0d5c2f 0%, #2f9e44 100%);
+  color:white;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.site-header::before{
+  content:'';
+  position:absolute;
+  width:300px;
+  height:300px;
+  background:rgba(255,255,255,.08);
+  border-radius:50%;
+  top:-100px;
+  right:-100px;
+}
+
+.brand{
+  font-size:3rem;
+  font-weight:700;
+  text-decoration:none;
+  color:white;
+  display:inline-block;
+  margin-bottom:1rem;
+}
+
+.tagline{
+  font-size:1.1rem;
+  opacity:.9;
+}
+
+/* CARDS */
+
+.intro,
+.calculator,
+.tips{
+  background:rgba(255,255,255,.7);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.5);
+  border-radius:30px;
+  box-shadow:var(--shadow);
+  padding:2.5rem;
+  margin-top:-4rem;
+}
+
+.calculator,
+.tips{
+  margin-top:2rem;
+}
+
+h1{
+  font-size:3rem;
+  margin-bottom:1rem;
+  color:var(--green-dark);
+}
+
+h2{
+  font-size:2rem;
+  margin-bottom:1.5rem;
+  color:var(--green-dark);
+}
+
+h3{
+  margin-bottom:.7rem;
+}
+
+/* FORM */
+
+fieldset{
+  border:none;
+}
+
+.field-group{
+  margin-bottom:1.3rem;
+}
+
+label{
+  display:block;
+  margin-bottom:.5rem;
+  font-weight:600;
+}
+
+input{
+  width:100%;
+  padding:1rem 1.2rem;
+  border:none;
+  border-radius:16px;
+  background:#f6fff7;
+  border:2px solid transparent;
+  font-size:1rem;
+  transition:.3s;
+}
+
+input:focus{
+  outline:none;
+  border-color:var(--green);
+  box-shadow:0 0 0 5px rgba(47,158,68,.15);
+}
+
+/* BUTTONS */
+
+.actions{
+  display:flex;
+  gap:1rem;
+  margin-top:2rem;
+  flex-wrap:wrap;
+}
+
+.btn{
+  border:none;
+  padding:1rem 2rem;
+  border-radius:999px;
+  cursor:pointer;
+  font-weight:600;
+  font-size:1rem;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+}
+
+.btn{
+  background:linear-gradient(135deg,#2f9e44,#37b24d);
+  color:white;
+  box-shadow:0 10px 25px rgba(47,158,68,.25);
+}
+
+.secondary{
+  background:white;
+  color:var(--green-dark);
+  border:2px solid #d3f9d8;
+}
+
+/* RESULTADO */
+
+.result{
+  margin-top:2rem;
+  background:linear-gradient(135deg,#f1fff3,#d3f9d8);
+  border-radius:24px;
+  padding:2rem;
+  min-height:100px;
+  border:1px solid #c3e6cb;
+}
+
+.result strong{
+  color:var(--green-dark);
+}
+
+.feedback{
+  margin-top:1.2rem;
+  padding:1rem;
+  border-radius:15px;
+  font-weight:600;
+}
+
+.good{
+  background:#d3f9d8;
+  color:#1b4332;
+}
+
+.alert{
+  background:#fff3bf;
+  color:#7c5c00;
+}
+
+/* BARRA DE CONSUMO */
+
+.progress{
+  margin-top:1rem;
+  height:18px;
+  border-radius:999px;
+  background:#d8f3dc;
+  overflow:hidden;
+}
+
+.progress-bar{
+  height:100%;
+  background:linear-gradient(90deg,#2f9e44,#69db7c);
+  border-radius:999px;
+}
+
+/* TIPS */
+
+.tip-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:1.5rem;
+}
+
+.tip-card{
+  background:white;
+  border-radius:24px;
+  padding:2rem;
+  transition:.3s;
+  border:1px solid #e9f5eb;
+  box-shadow:0 10px 25px rgba(0,0,0,.04);
+}
+
+.tip-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 35px rgba(0,0,0,.08);
+}
+
+.tip-card p{
+  color:#4b6351;
+}
+
+/* FOOTER */
+
+.site-footer{
+  padding:2rem 0 2.5rem;
+  text-align:center;
+  color:#4f6a51;
+}
+
+.site-footer p{
+  margin:0;
+  font-size:0.98rem;
+}
+
+
+.site-footer{
+  text-align:center;
+  padding:3rem 1rem;
+  color:#4f6a51;
+  font-weight:500;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+  .site-header{
+    padding:3rem 1rem 5rem;
+  }
+
+  h1{
+    font-size:2.2rem;
+  }
+
+  h2{
+    font-size:1.6rem;
+  }
+
+  .intro,
+  .calculator,
+  .tips{
+    padding:1.5rem;
+    border-radius:24px;
+  }
+
+  .actions{
+    flex-direction:column;
+  }
+
+  .btn{
+    width:100%;
+  }
+}
